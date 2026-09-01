@@ -339,7 +339,7 @@ Make sure the following are installed:
 # 1. Clone the Repository
 
 ```bash
-git clone <repository-url>
+git clone <https://github.com/kchandanmahto/ckmhto.ai.git>
 cd chandan-portfolio
 ```
 
