@@ -32,6 +32,8 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
+        "https://ckmhto-ai.vercel.app",
+        "http://localhost:3000",
         settings.FRONTEND_URL,
     ],
     allow_credentials=True,
