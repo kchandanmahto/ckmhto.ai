@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <a href="https://ckmhto.ai">Live Portfolio</a>
+  <a href="https://ckmhto-ai.vercel.app/">Live Portfolio</a>
   ·
   <a href="#architecture">Architecture</a>
   ·
