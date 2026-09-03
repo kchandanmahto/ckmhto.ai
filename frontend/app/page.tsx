@@ -1,4 +1,4 @@
-import Navbar from "@/components/layout/Navbar";
+// import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/sections/Hero";
 import Expertise from "@/components/sections/Expertise";
 import FeaturedProjects from "@/components/sections/FeaturedProjects";
@@ -19,7 +19,7 @@ import Footer from "@/components/layout/Footer";
 export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white">
-      <Navbar />
+      {/* <Navbar /> */}
 
       <Hero />
       <Expertise />

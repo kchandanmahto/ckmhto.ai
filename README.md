@@ -47,6 +47,12 @@ The platform is designed to demonstrate both the **engineering work**
 and the **systems behind the work**.
 
 ---
+## 🖥️ Portfolio Preview
+
+![ckmhto.ai Portfolio](docs/assets/ckmhto-ai-home.png)
+
+> AI Engineer & Software Developer portfolio built with modern
+> AI, full-stack, backend and cloud technologies.
 
 # ✨ Features
 
