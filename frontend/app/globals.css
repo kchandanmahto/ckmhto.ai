@@ -1,94 +1,69 @@
 @import "tailwindcss";
 
 /* =========================================================
-   CHANDAN PORTFOLIO — PREMIUM AI ENGINEERING SYSTEM
-   ========================================================= */
-
-/* =========================================================
-   ROOT / DARK THEME
+   CKMHTO.AI — DESIGN SYSTEM
+   Deep Navy + Electric Cyan | Dark + Light
    ========================================================= */
 
 :root {
-  --background: #060912;
-  --foreground: #f5f7ff;
-
-  --surface: #0a101c;
-  --surface-soft: rgba(255, 255, 255, 0.035);
-  --surface-hover: rgba(255, 255, 255, 0.055);
-
-  --text-primary: #f5f7ff;
-  --text-secondary: rgba(225, 231, 242, 0.72);
-  --text-muted: rgba(180, 191, 210, 0.52);
-  --text-subtle: rgba(160, 174, 198, 0.32);
-
-  --border: rgba(148, 163, 184, 0.14);
-  --border-strong: rgba(148, 163, 184, 0.22);
-
-  /* AI accent */
-  --accent: #8b5cf6;
-  --accent-secondary: #3b82f6;
-  --accent-soft: rgba(139, 92, 246, 0.12);
-
-  --accent-foreground: #ffffff;
-
-  --selection-background: #8b5cf6;
-  --selection-foreground: #ffffff;
-
-  --glow-primary: rgba(139, 92, 246, 0.18);
-  --glow-secondary: rgba(59, 130, 246, 0.14);
-
   color-scheme: dark;
-}
+  --background: #080d18;
+  --foreground: #f5f8ff;
+  --surface: #0d1525;
+  --surface-soft: rgba(255, 255, 255, 0.04);
+  --surface-hover: rgba(255, 255, 255, 0.07);
 
-/* =========================================================
-   LIGHT THEME
-   ========================================================= */
+  --text-primary: #f5f8ff;
+  --text-secondary: #c0cadb;
+  --text-muted: #94a3b8;
+  --text-subtle: #8190a5;
+
+  --border: rgba(148, 163, 184, 0.16);
+  --border-strong: rgba(148, 163, 184, 0.28);
+
+  --accent: #22d3ee;
+  --accent-secondary: #38bdf8;
+  --accent-soft: rgba(34, 211, 238, 0.12);
+  --accent-foreground: #07111b;
+
+  --selection-background: #22d3ee;
+  --selection-foreground: #07111b;
+
+  --glow-primary: rgba(34, 211, 238, 0.12);
+  --glow-secondary: rgba(56, 189, 248, 0.08);
+  --shadow-color: rgba(0, 0, 0, 0.25);
+}
 
 html.light {
-  --background: #f7f8fa;
-  --foreground: #09090b;
-
+  color-scheme: light;
+  --background: #f7f9fc;
+  --foreground: #111827;
   --surface: #ffffff;
-  --surface-soft: rgba(0, 0, 0, 0.035);
-  --surface-hover: rgba(0, 0, 0, 0.055);
+  --surface-soft: rgba(15, 23, 42, 0.035);
+  --surface-hover: rgba(15, 23, 42, 0.06);
 
-  --text-primary: #09090b;
-  --text-secondary: rgba(20, 20, 24, 0.72);
-  --text-muted: rgba(20, 20, 24, 0.52);
-  --text-subtle: rgba(20, 20, 24, 0.32);
+  --text-primary: #111827;
+  --text-secondary: #374151;
+  --text-muted: #596579;
+  --text-subtle: #64748b;
 
-  --border: rgba(0, 0, 0, 0.1);
-  --border-strong: rgba(0, 0, 0, 0.16);
+  --border: rgba(15, 23, 42, 0.12);
+  --border-strong: rgba(15, 23, 42, 0.2);
 
-  --accent: #111827;
-  --accent-secondary: #374151;
-  --accent-soft: rgba(0, 0, 0, 0.05);
-
+  --accent: #087e9b;
+  --accent-secondary: #0369a1;
+  --accent-soft: rgba(8, 126, 155, 0.09);
   --accent-foreground: #ffffff;
 
-  --selection-background: #111827;
+  --selection-background: #087e9b;
   --selection-foreground: #ffffff;
 
-  --glow-primary: rgba(0, 0, 0, 0.08);
-  --glow-secondary: rgba(0, 0, 0, 0.05);
-
-  color-scheme: light;
+  --glow-primary: rgba(8, 126, 155, 0.07);
+  --glow-secondary: rgba(3, 105, 161, 0.04);
+  --shadow-color: rgba(15, 23, 42, 0.10);
 }
 
-/* =========================================================
-   SYSTEM DARK MODE
-   ========================================================= */
-
-@media (prefers-color-scheme: dark) {
-  html:not(.light) {
-    color-scheme: dark;
-  }
-}
-
-/* =========================================================
-   RESET
-   ========================================================= */
-
+/* Reset */
 *,
 *::before,
 *::after {
@@ -99,56 +74,36 @@ html {
   min-height: 100%;
   scroll-behavior: smooth;
   background: var(--background);
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-strong) var(--background);
 }
 
 body {
   min-height: 100vh;
   margin: 0;
-
+  overflow-x: hidden;
   background:
     radial-gradient(circle at 50% -10%,
       var(--glow-primary),
       transparent 35%),
     var(--background);
-
   color: var(--foreground);
-
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
-  overflow-x: hidden;
-
+  font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
-
-/* =========================================================
-   SELECTION
-   ========================================================= */
 
 ::selection {
   background: var(--selection-background);
   color: var(--selection-foreground);
 }
 
-/* =========================================================
-   LINKS
-   ========================================================= */
-
 a {
   color: inherit;
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
-
-/* =========================================================
-   BUTTONS / FORMS
-   ========================================================= */
 
 button,
 input,
@@ -157,18 +112,10 @@ select {
   font: inherit;
 }
 
-button,
-a {
-  -webkit-tap-highlight-color: transparent;
-}
-
 button {
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
-
-/* =========================================================
-   IMAGES
-   ========================================================= */
 
 img {
   display: block;
@@ -176,10 +123,7 @@ img {
   height: auto;
 }
 
-/* =========================================================
-   SCROLLBAR
-   ========================================================= */
-
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -194,61 +138,32 @@ img {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--text-subtle);
+  background: var(--text-muted);
 }
 
-/* Firefox */
-
-html {
-  scrollbar-width: thin;
-  scrollbar-color:
-    var(--border-strong) var(--background);
-}
-
-/* =========================================================
-   GLOBAL CONTAINER
-   ========================================================= */
-
+/* Layout */
 .site-container {
   width: min(100% - 48px, 1280px);
   margin-inline: auto;
 }
 
-/* =========================================================
-   GRID BACKGROUND
-   ========================================================= */
-
 .grid-background {
   background-image:
-    linear-gradient(var(--border) 1px,
-      transparent 1px),
-    linear-gradient(90deg,
-      var(--border) 1px,
-      transparent 1px);
-
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
   background-size: 64px 64px;
 }
 
-/* =========================================================
-   PREMIUM GLASS
-   ========================================================= */
-
+/* Surfaces and effects */
 .glass {
   background: var(--surface-soft);
-
   border: 1px solid var(--border);
-
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-
   box-shadow:
-    0 20px 80px rgba(0, 0, 0, 0.18),
-    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+    0 20px 80px var(--shadow-color),
+    inset 0 1px 0 var(--border);
 }
-
-/* =========================================================
-   SOFT GLOW
-   ========================================================= */
 
 .soft-glow {
   position: relative;
@@ -256,24 +171,14 @@ html {
 
 .soft-glow::before {
   content: "";
-
   position: absolute;
-
   inset: -20%;
-
   z-index: -1;
-
-  background:
-    radial-gradient(circle at center,
+  background: radial-gradient(circle at center,
       var(--glow-primary),
       transparent 60%);
-
   pointer-events: none;
 }
-
-/* =========================================================
-   AI ACCENT GLOW
-   ========================================================= */
 
 .ai-glow {
   box-shadow:
@@ -281,87 +186,15 @@ html {
     0 0 140px var(--glow-secondary);
 }
 
-/* =========================================================
-   PREMIUM HAIRLINE
-   ========================================================= */
-
 .hairline {
   height: 1px;
-
-  background:
-    linear-gradient(90deg,
+  background: linear-gradient(90deg,
       transparent,
       var(--border-strong),
       transparent);
 }
 
-/* =========================================================
-   ANIMATIONS
-   ========================================================= */
-
-@keyframes fade-up {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-up {
-  animation:
-    fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
-}
-
-/* =========================================================
-   SOFT PULSE
-   ========================================================= */
-
-@keyframes pulse-soft {
-
-  0%,
-  100% {
-    opacity: 0.35;
-  }
-
-  50% {
-    opacity: 1;
-  }
-}
-
-.animate-pulse-soft {
-  animation:
-    pulse-soft 2.5s ease-in-out infinite;
-}
-
-/* =========================================================
-   FLOAT
-   ========================================================= */
-
-@keyframes float {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-8px);
-  }
-}
-
-.animate-float {
-  animation:
-    float 5s ease-in-out infinite;
-}
-
-/* =========================================================
-   THEME TEXT UTILITIES
-   ========================================================= */
-
+/* Theme-aware text */
 .text-theme-primary {
   color: var(--text-primary);
 }
@@ -378,10 +211,7 @@ html {
   color: var(--text-subtle);
 }
 
-/* =========================================================
-   THEME SURFACE UTILITIES
-   ========================================================= */
-
+/* Theme-aware surfaces */
 .bg-theme {
   background-color: var(--background);
 }
@@ -406,10 +236,7 @@ html {
   border-color: var(--border-strong);
 }
 
-/* =========================================================
-   ACCENT UTILITIES
-   ========================================================= */
-
+/* Accent utilities */
 .text-accent {
   color: var(--accent);
 }
@@ -426,19 +253,62 @@ html {
   border-color: var(--accent);
 }
 
-/* =========================================================
-   FOCUS
-   ========================================================= */
-
+/* Accessibility */
 :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
 
-/* =========================================================
-   MOBILE
-   ========================================================= */
+/* Animations */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
 
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes pulse-soft {
+
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2.5s ease-in-out infinite;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* Responsive */
 @media (max-width: 640px) {
   .site-container {
     width: min(100% - 32px, 1280px);
@@ -449,19 +319,11 @@ html {
   }
 }
 
-/* =========================================================
-   TABLET
-   ========================================================= */
-
 @media (min-width: 641px) and (max-width: 1024px) {
   .site-container {
     width: min(100% - 40px, 1280px);
   }
 }
-
-/* =========================================================
-   LARGE DESKTOP
-   ========================================================= */
 
 @media (min-width: 1440px) {
   .site-container {
@@ -469,10 +331,7 @@ html {
   }
 }
 
-/* =========================================================
-   REDUCED MOTION
-   ========================================================= */
-
+/* Respect reduced-motion preferences */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -485,35 +344,4 @@ html {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-}
-
-/* =========================================================
-   WHITE CTA CONTRAST
-   ========================================================= */
-
-.bg-white {
-  color: #000000 !important;
-}
-
-.bg-white * {
-  color: #000000 !important;
-}
-
-.bg-white svg {
-  color: #000000 !important;
-  stroke: currentColor;
-}
-
-button.bg-white,
-a.bg-white {
-  color: #000000 !important;
-}
-
-button.bg-white *,
-a.bg-white * {
-  color: #000000 !important;
-}
-
-.bg-white:hover {
-  color: #000000 !important;
 }

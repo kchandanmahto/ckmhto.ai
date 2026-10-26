@@ -127,12 +127,15 @@ export default function Services() {
 
                     <Link
                         href="/contact"
-                        className="group flex w-fit items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition hover:bg-white/85"
+                        className="group inline-flex w-fit items-center justify-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400 px-6 py-3 text-sm font-semibold !text-slate-950 transition-all duration-300 hover:-translate-y-0.5 hover:bg-cyan-300 hover:shadow-lg hover:shadow-cyan-400/20"
                     >
-                        Start a Project
+                        <span className="!text-slate-950">
+                            Start a Project
+                        </span>
+
                         <ArrowUpRight
                             size={17}
-                            className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
+                            className="!text-slate-950 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
                         />
                     </Link>
                 </div>
